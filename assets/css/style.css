@@ -1,25 +1,4 @@
-/*-----------------------------------*\
-  #style.css
-\*-----------------------------------*/
-
-/**
- * copyright 2022 codewithsadee
- */
-
-
-
-
-
-/*-----------------------------------*\
-  #CUSTOM PROPERTY
-\*-----------------------------------*/
-
 :root {
-
-  /** 
-   * colors
-   */
-
   --sonic-silver: hsl(0, 0%, 46%);
   --spanish-gray: hsl(0, 0%, 60%);
   --theme-color: hsl(10, 100%, 57%);
@@ -34,62 +13,26 @@
   --white_10: hsl(0, 0%, 100%, 0.1);
   --white: hsl(0, 0%, 100%);
   --black: hsl(0, 0%, 0%);
-
-  /**
-   * typography
-   */
-
   --ff-poppins: 'Poppins', sans-serif;
   --ff-mulish: 'Mulish', sans-serif;
-
   --fs-35: 3.5rem;
   --fs-30: 3rem;
   --fs-25: 2.5rem;
   --fs-18: 1.8rem;
   --fs-17: 1.7rem;
   --fs-13: 1.3rem;
-
   --fw-800: 800;
   --fw-700: 700;
   --fw-600: 600;
   --fw-500: 500;
   --fw-400: 400;
-
-  /**
-   * spacing
-   */
-
   --section-padding: 80px;
-
-  /**
-   * shadow
-   */
-
   --shadow: 0 0 20px hsla(0, 0%, 0%, 0.08);
-
-  /**
-   * radius
-   */
-
   --radius-10: 10px;
   --radius-8: 8px;
-
-  /**
-   * transition
-   */
-
   --transition: 0.25s ease;
   --cubic-out: cubic-bezier(0.33, 0.85, 0.4, 0.96);
-
 }
-
-
-
-
-
-/*-----------------------------------*\
-  #RESET
-\*-----------------------------------*/
 
 *,
 *::before,
@@ -163,14 +106,6 @@ body::-webkit-scrollbar-thumb {
   border: 3px solid var(--white);
   border-radius: 50px;
 }
-
-
-
-
-
-/*-----------------------------------*\
-  #REUSED STYLE
-\*-----------------------------------*/
 
 .container { padding-inline: 30px; }
 
@@ -288,13 +223,6 @@ body::-webkit-scrollbar-thumb {
 
 .has-scrollbar::-webkit-scrollbar-button { width: calc(25% - 25px); }
 
-
-
-
-/*-----------------------------------*\
-  #HEADER
-\*-----------------------------------*/
-
 .header {
   position: fixed;
   top: 0;
@@ -366,14 +294,6 @@ body::-webkit-scrollbar-thumb {
   font-weight: var(--fw-500);
 }
 
-
-
-
-
-/*-----------------------------------*\
-  #HERO
-\*-----------------------------------*/
-
 .slide-down-btn { display: none; }
 
 .hero {
@@ -428,14 +348,6 @@ body::-webkit-scrollbar-thumb {
 
 .exp-list .span { font-size: var(--fs-13); }
 
-
-
-
-
-/*-----------------------------------*\
-  #SKILLS
-\*-----------------------------------*/
-
 .skills-banner { display: none; }
 
 .skills { background-color: var(--black); }
@@ -470,14 +382,6 @@ body::-webkit-scrollbar-thumb {
   height: 8px;
 }
 
-
-
-
-
-/*-----------------------------------*\
-  #TIMELINE
-\*-----------------------------------*/
-
 .timeline-item {
   padding-block: 20px;
   font-size: var(--fs-18);
@@ -491,14 +395,6 @@ body::-webkit-scrollbar-thumb {
 
 .timeline-item .item-title { color: var(--black); }
 
-
-
-
-
-/*-----------------------------------*\
-  #PRICEING
-\*-----------------------------------*/
-
 .pricing { background-color: var(--cultured); }
 
 .pricing .section-text { margin-block-end: 60px; }
@@ -511,7 +407,6 @@ body::-webkit-scrollbar-thumb {
 .pricing-card {
   --color: var(--black);
   --icon-color: var(--theme-color);
-
   background-color: var(--white);
   border-radius: var(--radius-10);
   box-shadow: var(--shadow);
@@ -547,23 +442,7 @@ body::-webkit-scrollbar-thumb {
   --icon-color: var(--white);
 }
 
-
-
-
-
-/*-----------------------------------*\
-  #NEWS
-\*-----------------------------------*/
-
 .news-card .card-text { margin-block-end: 5px; }
-
-
-
-
-
-/*-----------------------------------*\
-  #CONTACT
-\*-----------------------------------*/
 
 .contact { background-color: var(--cultured); }
 
@@ -629,13 +508,98 @@ textarea.input-field {
 
 .submit-btn:is(:hover, :focus) ion-icon { transform: rotate(-45deg); }
 
+.footer {
+  background-color: var(--black);
+  color: var(--white);
+  text-align: center;
+  padding-block: 30px;
+}
 
+.copyright { margin-block-end: 10px; }
 
+.copyright-link { display: inline-block; }
 
+.copyright-link:is(:hover, :focus) { text-decoration: underline; }
 
-/*-----------------------------------*\
-  #FOOTER
-\*-----------------------------------*/
+.social-list {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.social-link { font-size: 17px; }
+
+@media (min-width: 576px) {
+  .scrollbar-item { min-width: calc(50% - 20px); }
+  .exp-list {
+    display: flex;
+    justify-content: flex-start;
+    gap: 50px;
+  }
+  .exp-list .list-item:not(:last-child) { margin-block-end: 0; }
+  .pricing-card {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 10px;
+  }
+  .pricing-card .card-title {
+    margin-block: 0;
+    margin-inline-end: auto;
+  }
+}
+
+@media (min-width: 768px) {
+  :root {
+    --fs-30: 3.5rem;
+    --fs-25: 3rem;
+  }
+  .h3 { --fs-18: 2rem; }
+  .card-content { padding: 30px 35px; }
+  .card-content > ion-icon {
+    top: 30px;
+    right: 30px;
+  }
+  .timeline-item {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+  }
+  .pricing-card,
+  .contact-link { font-size: var(--fs-18); }
+  .footer .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .copyright { margin-block-end: 0; }
+}
+
+@media (min-width: 992px) {
+  :root {
+    --fs-35: 4.5rem;
+    --section-padding: 120px;
+  }
+  .container { padding-inline: 50px; }
+  .header {
+    background-color: transparent;
+    border-block-end: none;
+    padding-block: 25px;
+    transition: var(--transition);
+  }
+  .header.active {
+    background-color: var(--white);
+    padding-block: 20px;
+  }
+  .navbar,
+  .navbar.active {
+    all: unset;
+    margin-inline-start: auto;
+    transition: var(--transition);
+  }
+  .navbar { visibility: hidden; }
+.submit-btn ion-icon { transition: var(--transition); }
+
+.submit-btn:is(:hover, :focus) ion-icon { transform: rotate(-45deg); }
 
 .footer {
   background-color: var(--black);
@@ -659,30 +623,10 @@ textarea.input-field {
 .social-link { font-size: 17px; }
 
 
-
-
-
-/*-----------------------------------*\
-  #MEDIA QUERIES
-\*-----------------------------------*/
-
-/**
- * responsive for larger than 576px screen
- */
-
 @media (min-width: 576px) {
 
-  /**
-   * REUSED STYLE
-   */
 
   .scrollbar-item { min-width: calc(50% - 20px); }
-
-
-
-  /**
-   * HERO
-   */
 
   .exp-list {
     display: flex;
@@ -692,11 +636,6 @@ textarea.input-field {
 
   .exp-list .list-item:not(:last-child) { margin-block-end: 0; }
 
-
-
-  /**
-   * PRICING
-   */
 
   .pricing-card {
     display: flex;
@@ -714,34 +653,15 @@ textarea.input-field {
 
 
 
-
-
-/**
- * responsive for larger than 768px screen
- */
-
 @media (min-width: 768px) {
-
-  /**
-   * CUSTOM PROPERTY
-   */
 
   :root {
 
-    /**
-     * typography
-     */
-
+   
     --fs-30: 3.5rem;
     --fs-25: 3rem;
 
   }
-
-
-
-  /**
-   * REUSED STYLE
-   */
 
   .h3 { --fs-18: 2rem; }
 
@@ -752,32 +672,15 @@ textarea.input-field {
     right: 30px;
   }
 
-
-
-  /**
-   * TIMELINE
-   */
-
   .timeline-item {
     grid-template-columns: repeat(3, 1fr);
     gap: 30px;
   }
 
 
-
-  /**
-   * PRICING, CONTACT
-   */
-
   .pricing-card,
   .contact-link { font-size: var(--fs-18); }
-
-
-
-  /**
-   * FOOTER
-   */
-
+   
   .footer .container {
     display: flex;
     justify-content: space-between;
@@ -787,32 +690,15 @@ textarea.input-field {
   .copyright { margin-block-end: 0; }
 
 }
-
-
-
-
-
-/**
- * responsive for larger than 992px screen
- */
+ 
 
 @media (min-width: 992px) {
 
-  /**
-   * CUSTOM PROPERTY
-   */
-
+  
   :root {
 
-    /**
-     * typography
-     */
-
+   
     --fs-35: 4.5rem;
-
-    /**
-     * spacing
-     */
 
     --section-padding: 120px;
 
@@ -820,17 +706,9 @@ textarea.input-field {
   
 
 
-  /**
-   * REUSED STYLE
-   */
 
   .container { padding-inline: 50px; }
 
-
-
-  /**
-   * HEADER
-   */
 
   .header {
     background-color: transparent;
@@ -875,11 +753,6 @@ textarea.input-field {
 
   .navbar-link:is(:hover, :focus) { color: var(--theme-color); }
 
-
-
-  /**
-   * HERO
-   */
 
   .hero {
     --section-padding: 70px;
@@ -938,11 +811,6 @@ textarea.input-field {
   }
 
 
-
-  /**
-   * SKILLS
-   */
-
   .skills .container {
     position: relative;
     display: grid;
@@ -966,18 +834,8 @@ textarea.input-field {
   }
 
 
-
-  /**
-   * TIMELINE
-   */
-
   .timeline-item { padding-block: 30px; }
 
-
-
-  /**
-   * PRICING
-   */
 
   .pricing .container {
     position: relative;
@@ -995,11 +853,6 @@ textarea.input-field {
   .pricing .section-text { margin-block-end: 0; }
 
 
-
-  /**
-   * CONTACT
-   */
-
   .contact .container {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -1013,18 +866,9 @@ textarea.input-field {
 
 
 
-
-
-/**
- * responsive for larger than 1200px screen
- */
-
 @media (min-width: 1200px) {
 
-  /**
-   * REUSED STYLE
-   */
-
+  
   .container {
     max-width: 1170px;
     width: 100%;
@@ -1037,20 +881,10 @@ textarea.input-field {
 
   :is(.portfolio, .news) .section-title { margin-block-end: 80px; }
 
-
-
-  /**
-   * HEADER
-   */
-
   .header .container { max-width: unset; }
 
   
-
-  /**
-   * HERO
-   */
-
   .hero-banner { width: 275px; }
 
+}
 }
