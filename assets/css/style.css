@@ -1,18 +1,18 @@
 :root {
-  --sonic-silver: hsl(0, 0%, 46%);
-  --spanish-gray: hsl(0, 0%, 60%);
+  --sonic-silver: hsl(0, 0%, 4%);
+  --spanish-gray: hsl(0, 3%, 6%);
   --theme-color: hsl(10, 100%, 57%);
-  --light-gray: hsl(0, 0%, 80%);
-  --gray-x-11: hsl(0, 0%, 73%);
+  --light-gray: hsl(0, 0%, 0%);
+  --gray-x-11: hsl(0, 0%, 100%);
   --dim-gray: hsl(0, 0%, 44%);
-  --cultured: hsl(0, 0%, 98%);
-  --black_10: hsl(0, 0%, 0%, 0.1);
-  --black_20: hsl(0, 0%, 0%, 0.2);
-  --black_30: hsl(0, 0%, 0%, 0.3);
-  --black_70: hsl(0, 0%, 0%, 0.7);
+  --cultured: hsl(0, 0%, 0%);
+  --black_10: hsl(0, 29%, 94%);
+  --black_20: hsla(0, 0%, 100%, 0.2);
+  --black_30: hsl(0, 100%, 97%);
+  --black_70: hsl(0, 25%, 91%);
   --white_10: hsl(0, 0%, 100%, 0.1);
   --white: hsl(0, 0%, 100%);
-  --black: hsl(0, 0%, 0%);
+  --black: hsl(0, 0%, 7%);
   --ff-poppins: 'Poppins', sans-serif;
   --ff-mulish: 'Mulish', sans-serif;
   --fs-35: 3.5rem;
@@ -83,7 +83,7 @@ html {
 }
 
 body {
-  background-color: var(--white);
+  background-color: var(--black);
   color: var(--sonic-silver);
   font-size: 1.6rem;
   line-height: 1.75;
